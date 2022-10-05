@@ -171,8 +171,8 @@ namespace ComponentAce.Compression.Libs.zlib
 					case METHOD: 
 						
 						if (z.avail_in == 0)
-							return r; r = f;
-						
+							return r; 
+						r = f;
 						z.avail_in--; z.total_in++;
 						if (((z.istate.method = z.next_in[z.next_in_index++]) & 0xf) != Z_DEFLATED)
 						{
